@@ -1,2 +1,0 @@
-# AdventOfCode
- AdventOfCode Solutions
