@@ -7,9 +7,4 @@
         <Nullable>enable</Nullable>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
-
-    <ItemGroup>
-      <Folder Include="2015" />
-    </ItemGroup>
-
 </Project>
