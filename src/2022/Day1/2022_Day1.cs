@@ -5,8 +5,8 @@ public class Day1
     public int Day1Solution_1()
     {
         int i, j = 0, k = 0;
-        string[] input = File.ReadAllLines("../../../2022/Day1/input.txt");
-        foreach (string item in input)
+        var input = File.ReadAllLines("../../../2022/Day1/input.txt");
+        foreach (var item in input)
         {
             if (item != "")
             {
@@ -16,10 +16,7 @@ public class Day1
 
             if (item == "")
             {
-                if (j >= k)
-                {
-                    k = j;
-                }
+                if (j >= k) k = j;
 
                 j = 0;
             }
@@ -27,13 +24,13 @@ public class Day1
 
         return k;
     }
-    
+
     public List<int> Day1Solution_2()
     {
         int i, j = 0, k = 0;
-        List<int> calories = new List<int>();
-        string[] input = File.ReadAllLines("../../../2022/Day1/input.txt");
-        foreach (string item in input)
+        var calories = new List<int>();
+        var input = File.ReadAllLines("../../../2022/Day1/input.txt");
+        foreach (var item in input)
         {
             if (item != "")
             {
@@ -47,6 +44,7 @@ public class Day1
                 j = 0;
             }
         }
+
         calories.Sort();
         return calories;
     }

@@ -4,7 +4,7 @@ public class Day3_2022
 {
     public string Day3_1()
     {
-        return String.Empty;
+        return string.Empty;
     }
 
     public int Day3_2()
