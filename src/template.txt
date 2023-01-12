@@ -1,0 +1,38 @@
+namespace AdventOfCode;
+
+public class DayX_20XX
+{
+    # region
+
+    private readonly string _input = @"
+
+";
+
+    #endregion
+
+    private string _day = "Solution for AoC Day X of 20XX: ";
+
+    public void Solution()
+    {
+        using (var reader = new StringReader(_input))
+        {
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                Solution1(line);
+                Solution2(line);
+            }
+            Console.WriteLine("\n" + _day + "\n" + _total1 + "\n" + _total2);
+        }
+    }
+
+    private int Solution1(string input)
+    {
+
+    }
+
+    private int Solution2(string input)
+    {
+    
+    }
+}

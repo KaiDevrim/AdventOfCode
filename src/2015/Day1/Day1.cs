@@ -2,13 +2,13 @@ namespace AdventOfCode;
 
 public class Day1_2015
 {
-    public static void Main()
+    private string _day = "Solution for AoC Day 1 of 2015: ";
+    public void Solution()
     {
-        Console.WriteLine(Solution1());
-        Console.WriteLine(Solution2());
+        Console.WriteLine("\n" + _day + "\n" + Solution1() + "\n" + Solution2());
     }
 
-    private static int Solution1()
+    private int Solution1()
     {
         var score = 0;
         var input =
@@ -21,7 +21,7 @@ public class Day1_2015
         return score;
     }
 
-    private static int Solution2()
+    private int Solution2()
     {
         var score = 0;
         var i = 0;
