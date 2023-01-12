@@ -2,6 +2,8 @@ namespace AdventOfCode;
 
 public class Day2_2015
 {
+    private readonly string _day = "Solution for AoC Day 2 of 2015: ";
+
     # region
 
     private readonly string _input = @"20x3x11
@@ -1010,11 +1012,10 @@ public class Day2_2015
 
     private int _total1;
     private int _total2;
-    private string _day = "Solution for AoC Day 2 of 2015: ";
 
     public void Solution()
     {
-        using (var reader = new StringReader(_input))
+        using (StringReader reader = new(_input))
         {
             string line;
             while ((line = reader.ReadLine()) != null)
@@ -1022,6 +1023,7 @@ public class Day2_2015
                 Solution1(line);
                 Solution2(line);
             }
+
             Console.WriteLine("\n" + _day + "\n" + _total1 + "\n" + _total2);
         }
     }
@@ -1039,7 +1041,8 @@ public class Day2_2015
         }
 
         Array.Sort(intSides);
-        int[] finalSides = {2 * intSides[0] * intSides[1], 2 * intSides[1] * intSides[2], 2 * intSides[0] * intSides[2]};
+        int[] finalSides =
+            {2 * intSides[0] * intSides[1], 2 * intSides[1] * intSides[2], 2 * intSides[0] * intSides[2]};
         Array.Sort(finalSides);
         int funSides = intSides[0] * intSides[1];
         int final = finalSides[0] + finalSides[1] + finalSides[2] + funSides;
@@ -1051,7 +1054,7 @@ public class Day2_2015
         string[] sides = input.Split('x');
         int[] intSides = new int[3];
         int index = 0;
-        foreach (var side in sides)
+        foreach (string side in sides)
         {
             intSides[index] = int.Parse(side);
             index++;

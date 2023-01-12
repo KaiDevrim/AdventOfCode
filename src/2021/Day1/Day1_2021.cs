@@ -5,8 +5,8 @@ public class Day1_2021
     public int Day1()
     {
         int i = 1, j = 0, k = 0, l = 0;
-        var input = File.ReadAllLines("./input.txt");
-        foreach (var item in input)
+        string[] input = File.ReadAllLines("./input.txt");
+        foreach (string item in input)
         {
             i = int.Parse(item);
             k++;

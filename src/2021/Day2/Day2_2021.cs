@@ -5,8 +5,8 @@ public class Day2_2021
     public int Day2()
     {
         int f = 0, d = 0, a = 0;
-        var input = File.ReadAllLines("./input.txt");
-        foreach (var item in input)
+        string[] input = File.ReadAllLines("./input.txt");
+        foreach (string item in input)
             if (item.StartsWith("forward"))
             {
                 // f += value
