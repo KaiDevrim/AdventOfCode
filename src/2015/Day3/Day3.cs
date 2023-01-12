@@ -18,42 +18,36 @@ public class Day3_2015
 
     private int Solution1(string input)
     {
-        List<Point> points = new();
-        points.Add();
-        int index = 0;
+        int[,] points = new int[200, 200];
+        int Xindex = 100;
+        int Yindex = 100;
         int result = 0;
-        points[0].X = 0;
-        points[0].Y = 0;
-        points[0].Presents = 1;
+        points[Xindex, Yindex] = 1;
         foreach (char direction in input)
             switch (direction)
             {
                 case '>':
-                    index++;
-                    points[index].X = points[index - 1].X + 1;
-                    points[index].Y = points[index - 1].Y;
-                    points[index].Presents += 1;
+                    Xindex++;
+                    points[Xindex, Yindex] += 1;
                     break;
                 case '^':
-                    index++;
-                    points[index].Y = points[index - 1].Y + 1;
-                    points[index].X = points[index - 1].X;
-                    points[index].Presents += 1;
+                    Yindex++;
+                    points[Xindex, Yindex] += 1;
                     break;
                 case '<':
-                    index++;
-                    points[index].X = points[index - 1].X - 1;
-                    points[index].Y = points[index - 1].Y;
-                    points[index].Presents += 1;
+                    Xindex--;
+                    points[Xindex, Yindex] += 1;
                     break;
                 case 'v':
-                    index++;
-                    points[index].Y = points[index - 1].Y - 1;
-                    points[index].X = points[index - 1].X;
-                    points[index].Presents += 1;
+                    Yindex--;
+                    points[Xindex, Yindex] += 1;
                     break;
             }
 
+        for (int i = 0; i < 200; i++)
+        for (int j = 0; j < 200; j++)
+            if (points[i, j] >= 1)
+                result += 1;
         return result;
     }
 
