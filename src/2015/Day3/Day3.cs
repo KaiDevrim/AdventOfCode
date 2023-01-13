@@ -18,34 +18,31 @@ public class Day3_2015
 
     private int Solution1(string input)
     {
-        int[,] points = new int[200, 200];
-        int Xindex = 100;
-        int Yindex = 100;
+        int size = 200;
+        int[,] points = new int[size, size];
+        int xindex = size / 2;
+        int yindex = size / 2;
         int result = 0;
-        points[Xindex, Yindex] = 1;
+        points[xindex, yindex] = 1;
         foreach (char direction in input)
             switch (direction)
             {
                 case '>':
-                    Xindex++;
-                    points[Xindex, Yindex] += 1;
+                    points[xindex++, yindex] += 1;
                     break;
                 case '^':
-                    Yindex++;
-                    points[Xindex, Yindex] += 1;
+                    points[xindex, yindex++] += 1;
                     break;
                 case '<':
-                    Xindex--;
-                    points[Xindex, Yindex] += 1;
+                    points[xindex--, yindex] += 1;
                     break;
                 case 'v':
-                    Yindex--;
-                    points[Xindex, Yindex] += 1;
+                    points[xindex, yindex--] += 1;
                     break;
             }
 
-        for (int i = 0; i < 200; i++)
-        for (int j = 0; j < 200; j++)
+        for (int i = 0; i < size; i++)
+        for (int j = 0; j < size; j++)
             if (points[i, j] >= 1)
                 result += 1;
         return result;
