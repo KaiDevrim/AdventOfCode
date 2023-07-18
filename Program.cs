@@ -7,6 +7,8 @@ public class Program
         new Day1_2015().Solution();
         new Day2_2015().Solution();
 
-        new Day3_2015().Solution();
+        // new Day3_2015().Solution();
+
+        new Day5_2015().Solution();
     }
 }
