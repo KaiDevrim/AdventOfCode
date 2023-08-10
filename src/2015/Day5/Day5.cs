@@ -1,8 +1,8 @@
-namespace AdventOfCode;
+namespace AdventOfCode._2015.Day5;
 
-public class Day5_2015
+public class Solution
 {
-    private readonly string[] _badpairs = new string[4] {"ab", "cd", "pq", "xy"};
+    private readonly string[] _badpairs = {"ab", "cd", "pq", "xy"};
     private readonly string _day = "Solution for AoC Day 5 of 2015: ";
 
     # region
@@ -1011,11 +1011,11 @@ yzsmlbnftftgwadz
 
     #endregion
 
-    private readonly char[] _vowels = new char[5] {'a', 'e', 'i', 'o', 'u'};
+    private readonly char[] _vowels = {'a', 'e', 'i', 'o', 'u'};
     private int _total1;
     private int _total2;
 
-    public void Solution()
+    public void Solution1()
     {
         using (StringReader reader = new(_input))
         {
@@ -1043,7 +1043,7 @@ yzsmlbnftftgwadz
         if (ContainsVowels(input) &&
             ContainsDoubles(input) &&
             !ContainsBadPairs(input) &&
-            ContainsDoublePairs(input) &&
+            // ContainsDoublePairs(input) &&
             ContainsSpacedPairs(input))
             _total2 += 1;
     }
@@ -1085,10 +1085,6 @@ yzsmlbnftftgwadz
                 return true;
 
         return false;
-    }
-
-    private bool ContainsDoublePairs(string input)
-    {
     }
 
     private bool ContainsSpacedPairs(string input)
